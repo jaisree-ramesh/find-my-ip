@@ -10,14 +10,19 @@ function App() {
     city,
     country,
     lat,
-    lng
+    lng,
+    isLoading
   } = useIp();
+
   console.log(lat,lng);
   console.log(country);
   const c = (country.toLowerCase());
   console.log(c)
   const img = `https://flagcdn.com/${c}.svg`;
   console.log(img)
+  const getContent = () => {
+    if (isLoading) return <div>is loading...</div>
+  }
   return (
     <div className="App">
       <div className="container">
