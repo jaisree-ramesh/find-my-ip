@@ -1,0 +1,54 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto Slab", serif;
+  /* background: black; */
+  background: hsla(205, 46%, 10%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(205, 46%, 10%, 1) 0%,
+    hsla(191, 28%, 23%, 1) 50%,
+    hsla(207, 41%, 27%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(205, 46%, 10%, 1) 0%,
+    hsla(191, 28%, 23%, 1) 50%,
+    hsla(207, 41%, 27%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(205, 46%, 10%, 1) 0%,
+    hsla(191, 28%, 23%, 1) 50%,
+    hsla(207, 41%, 27%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
+}
+.container {
+  width: 900px;
+  height: 600px;
+  padding: 5px 15px;
+  background: transparent;
+}
+h1 {
+  color: whitesmoke;
+}
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: white;
+}
+.row {
+  padding: 10px;
+  width: 100%;
+  /* font-style: bold; */
+  font-weight: bold;
+}
