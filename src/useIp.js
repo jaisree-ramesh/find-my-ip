@@ -3,18 +3,20 @@ import { useState, useEffect } from "react";
 
 function useIp () {
 
-    const [items,setItems] = useState([{}])
-    const [isLoading,setIsLoading] = useState([true])
+   
+    const [items,setItems] = useState({})
+    const [isLoading,setIsLoading] = useState(true)
 
     useEffect(() =>  { 
         fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_API_KEY}`)
             .then((res) => res.json())
             .then((json) => {
-            setIsLoading(false);
-            setItems(json);
+                setItems(json);
+                setIsLoading(false);
             })
             .catch(() => console.log("request failed"));
-        }, []);
+        }, []
+    );
         const country = (items.location?.country);
         // console.log("inside UseIP : ", country)
         const city = items.location?.city;
@@ -29,9 +31,10 @@ function useIp () {
         country,
         city,
         lat,
-        lng,  
+        lng,
         isLoading
     };
         
 }
 export default useIp;
+        
